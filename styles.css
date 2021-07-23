@@ -4,92 +4,157 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  /* height: 100%; */
   background-color: black;
+  
 }
+
 
 h1 {
   text-align:center;
-  color: #6cba52;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: blueviolet;
+  font-family:'Cinzel Decorative', cursive;
   font-size: 60px;
+  margin: auto 10px;
 
  }
+
 
  h2 {
-   font-size: 40px
+   color: white;
+   font-size: 40px;
+   font-family:'Cinzel Decorative', cursive;
  }
 
-.top {
-  height: 50%;
-  background-color: #dba879;
+
+ p {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: #f7dacb;
+ }
+
+.bold {
+  font-weight:bold;
+} 
+
+ .gridcontainer {
+  height: 100%;
+  display:grid;
+  /* justify-items: space-between ; */
+  grid-gap: 10px;
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* grid-template-areas: 
+  "container1 container1 container1"
+  "container2 container2 container2";
+   */
 }
 
 .container1 {
-  display:flex;
+  height: 100%;
+  background-color: #e3a64b;
+  /* grid-area: container1; */
+  grid-row:1/2;
+  grid-column:1/4;
+  display: flex;
   justify-content: center;
   align-items: center;
 
 }
 
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center;
+  /* grid-area: container2; */
+  margin:auto;
+  grid-row:2/3;
+  grid-column:1/4;
+}
+
 .centered {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-weight: 300;
 }
 
 .centered:hover {
-  color:blueviolet;
+  color:#8fbf86;
+ 
 }
 
-.container2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-content: center;
-  color: white;
-  padding-bottom: 50px
-}
 .boxitems {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   align-content: center;
-  padding-top: 70px;
+  margin: auto;
+  height: 50px;
+  width: 80%;
+  
 }
 
 .box1 {
-  height: 50px;
-  width: 200px;
-  background-color: #d67442;
+  background-color: #db8000;
+  /* grid-area: box1; */
 }
 
 .box2 {
-  height: 50px;
-  width: 200px;
   background-color: #dd70e0;
+  /* grid-area: box2; */
 }
 
 .box3 {
-  height: 50px;
-  width: 200px;
-  background-color: #e07670;
+   background-color: #e07670;
+  /* grid-area: box3; */
 }
+
+.item {
+ text-align: center;
+ max-width:60%;
+ /* margin:auto; */
+}
+
 .item1 {
-  height: 200px;
-  width: 200px;
+  /* height: 200px;
+  width: 200px; */
   text-align: center;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  /* grid-area: item1; */
+  
 }
 
 .item2 {
-  height: 200px;
-  width: 200px;
+  /* height: 200px;
+  width: 200px; */
   text-align: center;
+  grid-row: 1/2;
+  grid-column:2/3;
+  /* grid-area: item2; */
+  
 }
 
 .item3 {
-  height: 200px;
-  width: 200px;
+  /* height: 200px;
+  width: 200px; */
   text-align: center;
+  grid-row: 1/2;
+  grid-column:3/4;
+  /* grid-area: item3; */
+    
+}
+
+
+/* @media (min-width: 992px) {
+.gridcontainer {
+  grid-template-columns: 33% 33% 33% ;
+  /* grid-template-rows: 50% 5% 45%; */
+     /* grid-template-areas:
+     "container1 container1 container1"
+     "item1 item2 item3"  
+     ; 
+}   */ 
+
+
+
+@media (min-width: 699px) {
+.container2 {
+  flex-direction:row;
+}
 }
